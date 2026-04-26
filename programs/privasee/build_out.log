@@ -1,0 +1,10 @@
+[2026-04-25T19:49:39.659220794Z ERROR cargo_build_sbf] Failed to obtain package metadata: `cargo metadata` exited with an error: error: failed to select a version for `getrandom`.
+        ... required by package `privasee v0.1.0 (/mnt/c/Users/Hp/Desktop/arcium contact dis/programs/privasee)`
+    versions that meet the requirements `^0.3` (locked to 0.3.4) are: 0.3.4
+    
+    package `privasee` depends on `getrandom` with feature `custom` but `getrandom` does not have that feature.
+     available features: std, wasm_js
+    
+    
+    failed to select a version for `getrandom` which could resolve this conflict
+    

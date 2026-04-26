@@ -1,0 +1,4 @@
+error: no such command: `build-sbf`
+
+	View all installed commands with `cargo --list`
+	Find a package to install `build-sbf` with `cargo search cargo-build-sbf`

@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+.next/
+target/
+dist/
+
+# Solana/Anchor artifacts
+.anchor/
+test-ledger/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Arcium
+.arcium/

@@ -1,0 +1,40 @@
+{
+  "name": "privasee",
+  "version": "1.0.0",
+  "description": "PrivaSee — Private contact discovery via Arcium MPC on Solana",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+  },
+  "dependencies": {
+    "@arcium-hq/client": "^0.9.7",
+    "@coral-xyz/anchor": "^0.32.1",
+    "@noble/curves": "^2.2.0",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-phantom": "^0.9.24",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/web3.js": "^1.95.0",
+    "js-sha3": "^0.9.3",
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.5",
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "chai": "^4.3.6",
+    "mocha": "^10.2.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^5.5.0"
+  }
+}

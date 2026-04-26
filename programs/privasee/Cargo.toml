@@ -1,0 +1,21 @@
+[package]
+name = "privasee"
+version = "0.1.0"
+description = "PrivaSee — Private contact discovery via Arcium MPC on Solana"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "privasee"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = { version = "0.32.1", features = ["init-if-needed"] }
+arcium-anchor = "0.8.5"
+arcium-client = "0.8.5"

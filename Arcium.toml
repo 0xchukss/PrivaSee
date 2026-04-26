@@ -1,0 +1,25 @@
+# Arcium.toml — Configuration for the Arcium CLI tooling suite
+# This file configures how PrivaSee interacts with Arcium's MPC network.
+
+[localnet]
+# Number of MPC nodes for local testing. Minimum is 2.
+# Each node holds secret shares and collaborates via the MPC protocol.
+nodes = 2
+nodes_ips = [
+  [172, 20, 0, 100],
+  [172, 20, 0, 101]
+]
+# Seconds to wait for the local Docker cluster to start
+localnet_timeout_secs = 60
+# MPC backend — Cerberus is the only supported backend
+backends = ["Cerberus"]
+
+# Devnet cluster configuration
+# The offset identifies which Arcium cluster to use on devnet.
+# 456 is the current devnet cluster offset per Arcium docs.
+[clusters.devnet]
+offset = 456
+
+# Mainnet cluster configuration (for future production deployment)
+[clusters.mainnet]
+offset = 2026

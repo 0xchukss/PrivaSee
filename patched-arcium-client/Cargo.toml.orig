@@ -1,0 +1,47 @@
+[package]
+name = "arcium-client"
+description = "A client-side library for interacting with the Arcium Solana program."
+version.workspace = true
+edition = "2021"
+license = "GPL-3.0-or-later"
+homepage = "https://www.arcium.com"
+
+[features]
+default = ["transactions"]
+transactions = [
+    "anchor-client",
+    "anchor-spl",
+    "solana-rpc-client",
+    "solana-rpc-client-api",
+    "serde_json",
+    "x25519-dalek",
+    "arcis-compiler",
+]
+staking = []
+
+[dependencies]
+anchor-lang.workspace = true
+anchor-client = { workspace = true, optional = true }
+arcis-compiler = { path = "../arcis-compiler", optional = true, version = "0.8.5" }
+solana-rpc-client = { workspace = true, optional = true }
+solana-rpc-client-api = { workspace = true, optional = true }
+anchor-spl = { workspace = true, optional = true }
+bytemuck = { workspace = true }
+const-crypto = { workspace = true }
+rand = { workspace = true, optional = true }
+solana-address-lookup-table-interface = { workspace = true }
+solana-alt-bn128-bls = { workspace = true }
+solana-program = "2"
+thiserror = { workspace = true }
+x25519-dalek = { version = "2.0.1", features = [
+    "static_secrets",
+    "serde",
+    "getrandom",
+], optional = true }
+serde_json = { workspace = true, optional = true }
+
+[dev-dependencies]
+bincode.workspace = true
+
+[lints.clippy]
+uninlined_format_args = "allow"
